@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h>Tizimga kirish sahifasi</h>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">tizimga kirish</button>
+    <a  href="{% url 'register' %}">royxatdan otish</a>
+</form>
+</body>
+</html>

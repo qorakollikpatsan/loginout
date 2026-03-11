@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bosh sahifa</title>
+</head>
+<body>
+
+<h1>Xush kelibsiz</h1>
+
+<a href="{% url 'about' %}">O'zim haqimda</a>
+
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Tizimni tark etish</button>
+</form>
+
+<a href="{% url 'profile' %}">Profile</a>
+
+</body>
+</html>

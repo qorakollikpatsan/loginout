@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{user.username}}</h1>
+<p>Email:{{user.email}}</p>
+<p>Ismim {{user.first_name}}</p>
+<p>Familyam{{user.last_name}}</p>
+<form method="POST"> action={%url 'logout'%}>{% csrf_token %}
+  <button type="submit">Tizimni tark etish</button>
+
+
+</form>
+<a href="{% url 'home' %}">orqaga qaytish</a>
+</body>
+</html>
